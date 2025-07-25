@@ -14,7 +14,7 @@ import { fetchUserDetails } from "../store/slices/userSlice";
 export default function MainNavigation() {
   const location = useLocation();
   const dispatch = useDispatch();
-
+  const imageUrl = import.meta.env.VITE_BACKEND_URL;
   const admin = useSelector((state) => state.auth.user);
   const { user } = useSelector((state) => state.user);
   const navigate = useNavigate();
@@ -23,6 +23,7 @@ export default function MainNavigation() {
   const [newAvatar, setNewAvatar] = useState("/circleAdd.svg");
   const [display, setDisplay] = useState("hidden");
   const [openBackdrop, setOpenBackdrop] = useState(false);
+
   useEffect(() => {
     if (admin) {
       dispatch(fetchUserDetails());
@@ -31,7 +32,7 @@ export default function MainNavigation() {
 
   useEffect(() => {
     if (user?.avatar) {
-      setNewAvatar(`import.meta.env.BACKEND_URL${user.avatar}`);
+      setNewAvatar(`${imageUrl}${user.avatar}`);
     } else {
       setNewAvatar("/circleAdd.svg"); // fallback
     }

@@ -13,6 +13,7 @@ import { fetchUserDetails, updateUserDetails } from "../store/slices/userSlice";
 
 export default function UserDetails() {
   const dispatch = useDispatch();
+  const imgUrl = import.meta.env.VITE_BACKEND_URLBACKEND_URL;
   const { user, loading } = useSelector((state) => state.user);
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState("");
@@ -73,7 +74,7 @@ export default function UserDetails() {
             preview
               ? preview
               : user?.avatar
-              ? `import.meta.env.BACKEND_URL${user.avatar}`
+              ? `${imgUrl}${user.avatar}`
               : "/default-avatar.png"
           }
           sx={{ width: "250px", height: "250px", marginBottom: "20px" }}
