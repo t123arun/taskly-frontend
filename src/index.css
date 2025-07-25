@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "jakartaSans-regular";
+  src: url("/fonts/PlusJakartaSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "jakartaSans-bold";
+  src: url("/fonts/PlusJakartaSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "jakartaSans-semibold";
+  src: url("/fonts/PlusJakartaSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@import "tailwindcss";
+@theme {
+  --color-blue: #6561a3;
+  --color-purple: #845ab1;
+  --color-textGrey: #8a898b;
+  --color-orange: #ffd5d5;
+  --color-textBlack: #4c4848;
+  --color-primaryPink: #f980ff;
+  --text-2xl: 40px;
+
+  --font-regular: jakartaSans-regular;
+  --font-bold: jakartaSans-bold;
+  --font-semibold: jakartaSans-semibold;
+}
+
+.body-bg {
+  @apply bg-linear-to-r from-[#FFC07C] to-[#F980FF];
+}
+
+.defaultTheme-h {
+  @apply bg-[rgba(255,255,255,0.20)];
+}
+.blueTheme-h {
+  @apply bg-[#6473E9];
+}
+.greenTheme-h {
+  @apply bg-[#0f6574];
+}
+.brownTheme-h {
+  @apply bg-[#444442];
+}
+.sidePannel {
+  @apply bg-purple;
+}
+.greenTheme {
+  @apply bg-linear-to-r from-[#0E6473] to-[#fefefe];
+}
+.greenTheme .sidePannel {
+  @apply bg-[#0F6574];
+}
+.blueTheme {
+  @apply bg-linear-to-r from-[#6A7BFF] to-[#fefefe];
+}
+.blueTheme .sidePannel {
+  @apply bg-[#6473E9];
+}
+.brownTheme {
+  @apply bg-linear-to-r from-[#2B2A28] to-[#fefefe];
+}
+.brownTheme .sidePannel {
+  @apply bg-[#444442];
+}
