@@ -14,7 +14,7 @@ import addIcon from "../assets/images/circleAdd.svg";
 
 export default function UserDetails() {
   const dispatch = useDispatch();
-  const imgUrl = import.meta.env.VITE_BACKEND_URL;
+  const imgUrl = import.meta.env.VITE_BACKEND_URL.replace(/\/$/, "");
   const { user, loading } = useSelector((state) => state.user);
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState("");
@@ -76,7 +76,7 @@ export default function UserDetails() {
               ? preview
               : user?.avatar
               ? `${imgUrl}/uploads/${user.avatar}`
-              : addIcon 
+              : addIcon
           }
           sx={{ width: "250px", height: "250px", marginBottom: "20px" }}
         />
