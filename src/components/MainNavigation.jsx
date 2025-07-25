@@ -10,6 +10,7 @@ import { fetchBoardTheme, resetBoardState } from "../store/slices/boardSlice";
 import logoWhiteBg from "../assets/images/tasklyLogoBg.svg";
 import logo from "../assets/images/tasklyLogo.svg";
 import { fetchUserDetails } from "../store/slices/userSlice";
+import circleAddIcon from "../assets/images/circleAdd.svg";
 
 export default function MainNavigation() {
   const location = useLocation();
@@ -34,7 +35,7 @@ export default function MainNavigation() {
     if (user?.avatar) {
       setNewAvatar(`${imageUrl}${user.avatar}`);
     } else {
-      setNewAvatar("/circleAdd.svg"); // fallback
+      setNewAvatar(`${circleAddIcon}`); // fallback
     }
   }, [user]);
 

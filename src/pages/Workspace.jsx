@@ -14,6 +14,11 @@ import { Avatar, AvatarGroup } from "@mui/material";
 import star from "../assets/images/Star.svg";
 import polygonUnderline from "../assets/images/polygonUnderline.svg";
 import colorLine from "../assets/images/colorLine.svg";
+import avatar1 from "../assets/images/avatar.png";
+import avatar2 from "../assets/images/avatar2.png";
+import avatar3 from "../assets/images/avatar3.png";
+import avatar4 from "../assets/images/avatar4.svg";
+import avatar5 from "../assets/images/girlSitting.png";
 
 export default function Workspce() {
   const dispatch = useDispatch();
@@ -251,17 +256,11 @@ export default function Workspce() {
                   <h4 className="text-[26px]">Comming Soon</h4>
                   <p className="text-[12px]">Team Task Management</p>
                   <AvatarGroup max={4}>
-                    <Avatar alt="Remy Sharp" src="/avatar.png" />
-                    <Avatar alt="Travis Howard" src="/avatar2.png" />
-                    <Avatar alt="Cindy Baker" src="/avatar3.png" />
-                    <Avatar
-                      alt="Agnes Walker"
-                      src="/static/images/avatar/4.jpg"
-                    />
-                    <Avatar
-                      alt="Trevor Henderson"
-                      src="/static/images/avatar/5.jpg"
-                    />
+                    <Avatar alt="Remy Sharp" src={avatar1} />
+                    <Avatar alt="Travis Howard" src={avatar2} />
+                    <Avatar alt="Cindy Baker" src={avatar3} />
+                    <Avatar alt="Agnes Walker" src={avatar4} />
+                    <Avatar alt="Trevor Henderson" src={avatar5} />
                   </AvatarGroup>
                 </div>
               </div>
