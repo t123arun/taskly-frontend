@@ -13,7 +13,7 @@ import { fetchUserDetails, updateUserDetails } from "../store/slices/userSlice";
 
 export default function UserDetails() {
   const dispatch = useDispatch();
-  const imgUrl = import.meta.env.VITE_BACKEND_URLBACKEND_URL;
+  const imgUrl = import.meta.env.VITE_BACKEND_URL;
   const { user, loading } = useSelector((state) => state.user);
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState("");
