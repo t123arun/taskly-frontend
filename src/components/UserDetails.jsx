@@ -76,7 +76,7 @@ export default function UserDetails() {
               ? preview
               : user?.avatar
               ? `${imgUrl}/uploads/${user.avatar}`
-              : { addIcon }
+              : addIcon 
           }
           sx={{ width: "250px", height: "250px", marginBottom: "20px" }}
         />
