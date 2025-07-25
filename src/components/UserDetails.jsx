@@ -73,7 +73,7 @@ export default function UserDetails() {
             preview
               ? preview
               : user?.avatar
-              ? `http://localhost:5000${user.avatar}`
+              ? `import.meta.env.BACKEND_URL${user.avatar}`
               : "/default-avatar.png"
           }
           sx={{ width: "250px", height: "250px", marginBottom: "20px" }}
