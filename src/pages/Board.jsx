@@ -16,6 +16,11 @@ import { openDrawer } from "../store/slices/drawerSlice";
 import { fetchBoards, fetchBoardTheme } from "../store/slices/boardSlice";
 import clsx from "clsx";
 import { useEffect } from "react";
+import avatar1 from "../assets/images/avatar.png";
+import avatar2 from "../assets/images/avatar2.png";
+import avatar3 from "../assets/images/avatar3.png";
+import avatar4 from "../assets/images/avatar4.svg";
+import avatar5 from "../assets/images/girlSitting.png";
 
 export default function Board() {
   const { id } = useParams();
@@ -64,14 +69,11 @@ export default function Board() {
           </div>
           <div className="relative hidden md:block">
             <AvatarGroup max={4} className="opacity-80">
-              <Avatar alt="Remy Sharp" src="/avatar.png" />
-              <Avatar alt="Travis Howard" src="/avatar2.png" />
-              <Avatar alt="Cindy Baker" src="/avatar3.png" />
-              <Avatar alt="Agnes Walker" src="/static/images/avatar/4.jpg" />
-              <Avatar
-                alt="Trevor Henderson"
-                src="/static/images/avatar/5.jpg"
-              />
+              <Avatar alt="Remy Sharp" src={avatar1} />
+              <Avatar alt="Travis Howard" src={avatar2} />
+              <Avatar alt="Cindy Baker" src={avatar3} />
+              <Avatar alt="Agnes Walker" src={avatar4} />
+              <Avatar alt="Trevor Henderson" src={avatar5} />
             </AvatarGroup>
             <p className="absolute top-2 -left-35 w-full h-full font-regular text-lg opacity-50">
               Comming Soon...
