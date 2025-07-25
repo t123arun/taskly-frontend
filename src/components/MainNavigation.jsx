@@ -32,12 +32,11 @@ export default function MainNavigation() {
 
   useEffect(() => {
     if (user?.avatar) {
-      setNewAvatar(`${imageUrl}/uploads/${user.avatar}`);
+      setNewAvatar(`${imageUrl}${user.avatar}`);
     } else {
       setNewAvatar("/circleAdd.svg"); // fallback
     }
   }, [user]);
-
 
   const boardTheme = useSelector((state) => state.boards.theme);
 

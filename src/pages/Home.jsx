@@ -39,22 +39,22 @@ export default function Home() {
 
   const testimonialDetails = [
     {
-      imgUrl: { person1 },
+      imgUrl: person1 ,
       comment: "Very simple to use, keeps me on track with all need to do.",
       author: "kerry_parker",
     },
     {
-      imgUrl: { person2 },
+      imgUrl: person2 ,
       comment: "Loving the new drag-and-drop – super smooth experience!",
       author: "emma_designs",
     },
     {
-      imgUrl: { person3 },
+      imgUrl: person3 ,
       comment: "Please add color tags to cards for better visual sorting.",
       author: "peter_tasks",
     },
     {
-      imgUrl: { person4 },
+      imgUrl: person4 ,
       comment: "Export board to CSV or JSON option is missing.",
       author: "nina_js",
     },
