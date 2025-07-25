@@ -31,7 +31,7 @@ export default function MainNavigation() {
 
   useEffect(() => {
     if (user?.avatar) {
-      setNewAvatar(`http://localhost:5000${user.avatar}`);
+      setNewAvatar(`import.meta.env.BACKEND_URL${user.avatar}`);
     } else {
       setNewAvatar("/circleAdd.svg"); // fallback
     }
