@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { closeDrawer } from "../store/slices/drawerSlice";
 import { useEffect, useState } from "react";
 import { fetchUserDetails, updateUserDetails } from "../store/slices/userSlice";
+import addIcon from "../assets/images/circleAdd.svg";
 
 export default function UserDetails() {
   const dispatch = useDispatch();
@@ -74,8 +75,8 @@ export default function UserDetails() {
             preview
               ? preview
               : user?.avatar
-              ? `${imgUrl}${user.avatar}`
-              : "/default-avatar.png"
+              ? `${imgUrl}/${user.avatar}`
+              : { addIcon }
           }
           sx={{ width: "250px", height: "250px", marginBottom: "20px" }}
         />
