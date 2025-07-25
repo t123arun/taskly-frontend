@@ -17,6 +17,10 @@ import youtubeIcon from "../assets/images/youtubeIcon.svg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import { useSelector } from "react-redux";
+import person1 from "../assets/images/person1.svg";
+import person2 from "../assets/images/avatar2.png";
+import person3 from "../assets/images/avatar3.png";
+import person4 from "../assets/images/avatar4.svg";
 
 export default function Home() {
   const admin = useSelector((state) => state.auth.user);
@@ -35,22 +39,22 @@ export default function Home() {
 
   const testimonialDetails = [
     {
-      imgUrl: "../assets/images/person1.svg",
+      imgUrl: { person1 },
       comment: "Very simple to use, keeps me on track with all need to do.",
       author: "kerry_parker",
     },
     {
-      imgUrl: "../assets/images/avatar2.png",
+      imgUrl: { person2 },
       comment: "Loving the new drag-and-drop – super smooth experience!",
       author: "emma_designs",
     },
     {
-      imgUrl: "../assets/images/avatar3.png",
+      imgUrl: { person3 },
       comment: "Please add color tags to cards for better visual sorting.",
       author: "peter_tasks",
     },
     {
-      imgUrl: "../assets/images/avatar4.svg",
+      imgUrl: { person4 },
       comment: "Export board to CSV or JSON option is missing.",
       author: "nina_js",
     },

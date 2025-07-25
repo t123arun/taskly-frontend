@@ -74,7 +74,7 @@ export default function UserDetails() {
             preview
               ? preview
               : user?.avatar
-              ? `${imgUrl}${user.avatar}`
+              ? `${imgUrl}/uploads/${user.avatar}`
               : "/default-avatar.png"
           }
           sx={{ width: "250px", height: "250px", marginBottom: "20px" }}
